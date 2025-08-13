@@ -6,6 +6,50 @@ import ButtonWhite from "../components/buttonWhite";
 import NavBar from "../components/navBar";
 
 function Home() {
+  const event = [
+    {
+      id: 1,
+      title: "Stage ESCF été",
+      date: "19-21 août 2025",
+      description:
+        "Stage d'été pour les joueurs, avec des entraînements intensifs et des activités ludiques.",
+      image: "/img/stage-escf-ete.jpg",
+    },
+    {
+      id: 2,
+      title: "Stage ESCF été",
+      date: "26-28 août 2025",
+      description:
+        "Stage d'été pour les joueurs, avec des entraînements intensifs et des activités ludiques.",
+      image: "/img/stage-escf-ete.jpg",
+    },
+    {
+      id: 3,
+      title: "Assemblée Générale ESCF",
+      date: "13 Septembre 2025",
+      description:
+        "Petit tournoi interne suivi d'un repas convivial pour tous les membres.",
+      image: "/img/assemblee-generale.jpg",
+    },
+    {
+      id: 4,
+      title: "Tournoi de Faulquemont",
+      date: "20-21 Septembre 2025",
+      description:
+        "Venez participer à notre tournoi annuel, ouvert à tous les licenciés.",
+      image: "/img/tournoi-faulquemont.jpg",
+    },
+  ];
+  const galerie = [
+    { id: 1, image: "/img/galerie1.jpg" },
+    { id: 2, image: "/img/galerie2.jpg" },
+    { id: 3, image: "/img/galerie3.jpeg" },
+    { id: 4, image: "/img/galerie4.jpeg" },
+    { id: 5, image: "/img/tournoi-faulquemont.jpg" },
+    { id: 6, image: "/img/tournoi-faulquemont.jpg" },
+    { id: 7, image: "/img/tournoi-faulquemont.jpg" },
+    { id: 8, image: "/img/tournoi-faulquemont.jpg" },
+  ];
   return (
     <div className="min-h-screen bg-background bg-gradient-to-br from-gray-50 to-red-50 overflow-hidden">
       <NavBar />
@@ -108,94 +152,32 @@ function Home() {
                 </p>
               </div>
               <div className="space-y-6">
-                {/* Événement 1 */}
-                <div className="flex flex-col md:flex-row items-start md:items-center gap-4 p-4 border border-gray-200 rounded-lg shadow-sm bg-white">
-                  <div className="flex-shrink-0 text-red-600">
-                    <Calendar className="h-8 w-8" />
+                {/* Tous les événements */}
+                {event.map((evenement) => (
+                  <div
+                    className="flex flex-col md:flex-row items-start md:items-center gap-4 p-4 border border-gray-200 rounded-lg shadow-sm bg-white"
+                    key={evenement.id}
+                  >
+                    <div className="flex-shrink-0 text-red-600">
+                      <Calendar className="h-8 w-8" />
+                    </div>
+                    <div className="flex-grow">
+                      <h3 className="text-xl font-semibold text-gray-900">
+                        {evenement.title}
+                      </h3>
+                      <p className="text-gray-600 flex items-center gap-2 mt-1 text-sm">
+                        <Calendar className="h-4 w-4" />
+                        <span>{evenement.date}</span>
+                      </p>
+                      <p className="text-gray-700 text-sm mt-2">
+                        {evenement.description}
+                      </p>
+                    </div>
+                    <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-transparent hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 flex-shrink-0">
+                      Détails
+                    </button>
                   </div>
-                  <div className="flex-grow">
-                    <h3 className="text-xl font-semibold text-gray-900">
-                      Stage ESCF été
-                    </h3>
-                    <p className="text-gray-600 flex items-center gap-2 mt-1 text-sm">
-                      <Calendar className="h-4 w-4" />
-                      <span>19-21 août 2025</span>
-                    </p>
-                    <p className="text-gray-700 text-sm mt-2">
-                      Stage d'été pour les joueurs, avec des entraînements
-                      intensifs et des activités ludiques.
-                    </p>
-                  </div>
-                  <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-transparent hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 flex-shrink-0">
-                    Détails
-                  </button>
-                </div>
-                {/* Événement 2 */}
-                <div className="flex flex-col md:flex-row items-start md:items-center gap-4 p-4 border border-gray-200 rounded-lg shadow-sm bg-white">
-                  <div className="flex-shrink-0 text-red-600">
-                    <Calendar className="h-8 w-8" />
-                  </div>
-                  <div className="flex-grow">
-                    <h3 className="text-xl font-semibold text-gray-900">
-                      Stage ESCF été
-                    </h3>
-                    <p className="text-gray-600 flex items-center gap-2 mt-1 text-sm">
-                      <Calendar className="h-4 w-4" />
-                      <span>26-28 août 2025</span>
-                    </p>
-                    <p className="text-gray-700 text-sm mt-2">
-                      Stage d'été pour les joueurs, avec des entraînements
-                      intensifs et des activités ludiques.
-                    </p>
-                  </div>
-                  <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-transparent hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 flex-shrink-0">
-                    Détails
-                  </button>
-                </div>
-                {/* Événement 3 */}
-                <div className="flex flex-col md:flex-row items-start md:items-center gap-4 p-4 border border-gray-200 rounded-lg shadow-sm bg-white">
-                  <div className="flex-shrink-0 text-red-600">
-                    <Calendar className="h-8 w-8" />
-                  </div>
-                  <div className="flex-grow">
-                    <h3 className="text-xl font-semibold text-gray-900">
-                      Assemblée Générale ESCF
-                    </h3>
-                    <p className="text-gray-600 flex items-center gap-2 mt-1 text-sm">
-                      <Calendar className="h-4 w-4" />
-                      <span>13 Septembre 2025</span>
-                    </p>
-                    <p className="text-gray-700 text-sm mt-2">
-                      Petit tournoi interne suivi d'un repas convivial pour tous
-                      les membres.
-                    </p>
-                  </div>
-                  <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-transparent hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 flex-shrink-0">
-                    Détails
-                  </button>
-                </div>
-                {/* Événement 4 */}
-                <div className="flex flex-col md:flex-row items-start md:items-center gap-4 p-4 border border-gray-200 rounded-lg shadow-sm bg-white">
-                  <div className="flex-shrink-0 text-red-600">
-                    <Calendar className="h-8 w-8" />
-                  </div>
-                  <div className="flex-grow">
-                    <h3 className="text-xl font-semibold text-gray-900">
-                      Tournoi de Faulquemont
-                    </h3>
-                    <p className="text-gray-600 flex items-center gap-2 mt-1 text-sm">
-                      <Calendar className="h-4 w-4" />
-                      <span>20-21 Septembre 2025</span>
-                    </p>
-                    <p className="text-gray-700 text-sm mt-2">
-                      Venez participer à notre tournoi annuel, ouvert à tous les
-                      licenciés.
-                    </p>
-                  </div>
-                  <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-transparent hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 flex-shrink-0">
-                    Détails
-                  </button>
-                </div>
+                ))}
               </div>
             </div>
           </div>
@@ -211,47 +193,15 @@ function Home() {
             <p className="text-lg text-gray-600 max-w-xl">
               Découvrez l'ambiance de notre club
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 max-w-7xl mx-auto">
-              <img
-                className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow"
-                src="/img/galerie1.jpg"
-                alt=""
-              />
-              <img
-                className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow"
-                src="/img/galerie2.jpg"
-                alt=""
-              />
-              <img
-                className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow"
-                src="/img/galerie3.jpeg"
-                alt=""
-              />
-              <img
-                className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow"
-                src="/img/galerie4.jpeg"
-                alt=""
-              />
-              <img
-                className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow"
-                src="/img/tournoi-faulquemont.jpg"
-                alt=""
-              />
-              <img
-                className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow"
-                src="/img/tournoi-faulquemont.jpg"
-                alt=""
-              />
-              <img
-                className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow"
-                src="/img/tournoi-faulquemont.jpg"
-                alt=""
-              />
-              <img
-                className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow"
-                src="/img/tournoi-faulquemont.jpg"
-                alt=""
-              />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 max-w-full mx-auto">
+              {galerie.map((photo) => (
+                <img
+                  key={photo.id}
+                  className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                  src={photo.image}
+                  alt={`Galerie ${photo.id}`}
+                />
+              ))}
             </div>
           </div>
         </div>
