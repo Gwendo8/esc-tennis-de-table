@@ -58,16 +58,23 @@ function Home() {
             {/* Tournoi à Venir Section */}
             <div>
               <div className="flex flex-col gap-4 items-center text-center mb-10">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Tournoi à Venir</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+                  Tournoi à Venir
+                </h2>
                 <p className="text-lg text-gray-600 max-w-xl">
-                  Ne manquez pas notre tournoi annuel ouvert à tous les niveaux !
+                  Ne manquez pas notre tournoi annuel ouvert à tous les niveaux
+                  !
                 </p>
               </div>
               <div className="border border-red-100 rounded-xl shadow-lg overflow-hidden bg-white">
                 {/* En-tête */}
                 <div className="text-center pb-4 pt-6">
-                  <h3 className="text-2xl font-semibold text-gray-900">Tournoi de Faulquemont 2025</h3>
-                  <p className="text-gray-500 text-sm">Compétition ouverte à tous les licenciés</p>
+                  <h3 className="text-2xl font-semibold text-gray-900">
+                    Tournoi de Faulquemont 2025
+                  </h3>
+                  <p className="text-gray-500 text-sm">
+                    Compétition ouverte à tous les licenciés
+                  </p>
                 </div>
                 {/* Contenu */}
                 <div className="flex flex-col items-center p-0">
@@ -78,8 +85,8 @@ function Home() {
                   />
                   <div className="p-6 text-center">
                     <p className="text-gray-700 mb-4">
-                      Préparez-vous pour une journée de compétition intense et de camaraderie. Inscriptions bientôt
-                      ouvertes !
+                      Préparez-vous pour une journée de compétition intense et
+                      de camaraderie. Inscriptions bientôt ouvertes !
                     </p>
                     <div className="flex items-center justify-center gap-2 text-gray-600 text-sm mb-4">
                       <Calendar className="h-4 w-4" />
@@ -93,8 +100,12 @@ function Home() {
             {/* Prochains Événements Section */}
             <div>
               <div className="flex flex-col gap-4 items-center text-center mb-10">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Prochains Événements</h2>
-                <p className="text-lg text-gray-600 max-w-xl">Restez informés de toutes nos activités</p>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+                  Prochains Événements
+                </h2>
+                <p className="text-lg text-gray-600 max-w-xl">
+                  Restez informés de toutes nos activités
+                </p>
               </div>
               <div className="space-y-6">
                 {/* Événement 1 */}
@@ -103,13 +114,16 @@ function Home() {
                     <Calendar className="h-8 w-8" />
                   </div>
                   <div className="flex-grow">
-                    <h3 className="text-xl font-semibold text-gray-900">Stage ESCF été</h3>
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      Stage ESCF été
+                    </h3>
                     <p className="text-gray-600 flex items-center gap-2 mt-1 text-sm">
                       <Calendar className="h-4 w-4" />
                       <span>19-21 août 2025</span>
                     </p>
                     <p className="text-gray-700 text-sm mt-2">
-                      Stage d'été pour les joueurs, avec des entraînements intensifs et des activités ludiques.
+                      Stage d'été pour les joueurs, avec des entraînements
+                      intensifs et des activités ludiques.
                     </p>
                   </div>
                   <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-transparent hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 flex-shrink-0">
@@ -122,13 +136,16 @@ function Home() {
                     <Calendar className="h-8 w-8" />
                   </div>
                   <div className="flex-grow">
-                    <h3 className="text-xl font-semibold text-gray-900">Stage ESCF été</h3>
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      Stage ESCF été
+                    </h3>
                     <p className="text-gray-600 flex items-center gap-2 mt-1 text-sm">
                       <Calendar className="h-4 w-4" />
                       <span>26-28 août 2025</span>
                     </p>
                     <p className="text-gray-700 text-sm mt-2">
-                      Stage d'été pour les joueurs, avec des entraînements intensifs et des activités ludiques.
+                      Stage d'été pour les joueurs, avec des entraînements
+                      intensifs et des activités ludiques.
                     </p>
                   </div>
                   <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-transparent hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 flex-shrink-0">
@@ -141,13 +158,16 @@ function Home() {
                     <Calendar className="h-8 w-8" />
                   </div>
                   <div className="flex-grow">
-                    <h3 className="text-xl font-semibold text-gray-900">Assemblée Générale ESCF</h3>
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      Assemblée Générale ESCF
+                    </h3>
                     <p className="text-gray-600 flex items-center gap-2 mt-1 text-sm">
                       <Calendar className="h-4 w-4" />
                       <span>13 Septembre 2025</span>
                     </p>
                     <p className="text-gray-700 text-sm mt-2">
-                      Petit tournoi interne suivi d'un repas convivial pour tous les membres.
+                      Petit tournoi interne suivi d'un repas convivial pour tous
+                      les membres.
                     </p>
                   </div>
                   <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-transparent hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 flex-shrink-0">
@@ -160,13 +180,16 @@ function Home() {
                     <Calendar className="h-8 w-8" />
                   </div>
                   <div className="flex-grow">
-                    <h3 className="text-xl font-semibold text-gray-900">Tournoi de Faulquemont</h3>
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      Tournoi de Faulquemont
+                    </h3>
                     <p className="text-gray-600 flex items-center gap-2 mt-1 text-sm">
                       <Calendar className="h-4 w-4" />
                       <span>20-21 Septembre 2025</span>
                     </p>
                     <p className="text-gray-700 text-sm mt-2">
-                      Venez participer à notre tournoi annuel, ouvert à tous les licenciés.
+                      Venez participer à notre tournoi annuel, ouvert à tous les
+                      licenciés.
                     </p>
                   </div>
                   <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-transparent hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 flex-shrink-0">
@@ -179,6 +202,60 @@ function Home() {
         </div>
       </section>
       <div className="w-full h-1 bg-gradient-to-r from-transparent via-red-300 to-transparent my-12"></div>
+      <section>
+        <div className="container mx-auto px-4 text-center py-12">
+          <div className="flex flex-col gap-4 items-center text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+              Galerie Photos
+            </h2>
+            <p className="text-lg text-gray-600 max-w-xl">
+              Découvrez l'ambiance de notre club
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 max-w-7xl mx-auto">
+              <img
+                className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                src="/img/galerie1.jpg"
+                alt=""
+              />
+              <img
+                className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                src="/img/galerie2.jpg"
+                alt=""
+              />
+              <img
+                className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                src="/img/galerie3.jpeg"
+                alt=""
+              />
+              <img
+                className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                src="/img/galerie4.jpeg"
+                alt=""
+              />
+              <img
+                className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                src="/img/tournoi-faulquemont.jpg"
+                alt=""
+              />
+              <img
+                className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                src="/img/tournoi-faulquemont.jpg"
+                alt=""
+              />
+              <img
+                className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                src="/img/tournoi-faulquemont.jpg"
+                alt=""
+              />
+              <img
+                className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                src="/img/tournoi-faulquemont.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
