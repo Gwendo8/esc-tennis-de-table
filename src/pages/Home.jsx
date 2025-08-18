@@ -45,10 +45,8 @@ function Home() {
     { id: 2, image: "/img/galerie2.jpg" },
     { id: 3, image: "/img/galerie3.jpeg" },
     { id: 4, image: "/img/galerie4.jpeg" },
-    { id: 5, image: "/img/tournoi-faulquemont.jpg" },
-    { id: 6, image: "/img/tournoi-faulquemont.jpg" },
-    { id: 7, image: "/img/tournoi-faulquemont.jpg" },
-    { id: 8, image: "/img/tournoi-faulquemont.jpg" },
+    { id: 5, image: "/img/galerie1.jpg" },
+    { id: 6, image: "/img/galerie2.jpg" },
   ];
   return (
     <div className="min-h-screen bg-background bg-gradient-to-br from-gray-50 to-red-50 overflow-hidden">
@@ -63,7 +61,7 @@ function Home() {
               </span>
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900">
                 Club de Tennis de Table de
-                <span className="text-red-600"> Faulquemont</span>
+                <span className="text-red-600">Faulquemont</span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
                 Rejoignez notre club convivial et dynamique ! Que vous soyez
@@ -193,17 +191,52 @@ function Home() {
             <p className="text-lg text-gray-600 max-w-xl">
               Découvrez l'ambiance de notre club
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 max-w-full mx-auto">
-              {galerie.map((photo) => (
-                <img
-                  key={photo.id}
-                  className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow"
-                  src={photo.image}
-                  alt={`Galerie ${photo.id}`}
-                />
-              ))}
+            <div className=" md:flex md:flex-col md:gap-6">
+              {Array.from({ length: Math.ceil(galerie.length / 3) }).map(
+                (_, i) => {
+                  const group = galerie.slice(i * 3, i * 3 + 3);
+                  return (
+                    <div
+                      key={i}
+                      className="grid grid-cols-1 lg:grid-cols-3 gap-2 max-w-full mx-auto"
+                    >
+                      {group[0] && (
+                        <div className="col-span-2">
+                          <img
+                            src={group[0].image}
+                            alt=""
+                            className="border-0 rounded-2xl w-full h-full object-cover"
+                          />
+                        </div>
+                      )}
+                      <div className="grid grid-cols-1 grid-rows-2 gap-2">
+                        {group.slice(1).map((photo) => (
+                          <img
+                            key={photo.id}
+                            src={photo.image}
+                            alt=""
+                            className="w-full h-full object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  );
+                }
+              )}
             </div>
           </div>
+        </div>
+      </section>
+      <div className="w-full h-1 bg-gradient-to-r from-transparent via-red-300 to-transparent my-12"></div>
+      <section>
+        <div className="flex flex-col items-center justify-center py-12 gap-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            Découvrir le Club
+          </h2>
+          <span className="text-lg text-gray-600 max-w-xl text-center">
+            Explorez toutes les facettes de nottre club
+          </span>
+          <div className="flex gap-4"></div>
         </div>
       </section>
     </div>
